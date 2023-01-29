@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>stupidme.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../static/img/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <style type="text/css">
+        .title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            text-align: center;
+            line-height: 100%;
+            min-width: 600px;
+            max-width: 800px;
+        }
+
+        body {
+            display: table;
+            padding: 0;
+            margin: auto;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            margin: 20px 0 0 0;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 0 15px 0 0;
+            padding: 3px 0 3px 0;
+            float: left;
+            position: relative;
+            border: 0;
+        }
+
+        ul {
+            list-style: disc;
+        }
+
+        ul li {
+            margin: 0 0 0.25em 0.35em;
+        }
+
+        a {
+            text-decoration: none;
+            border-bottom: 1px black dotted;
+            color: #000;
+            font-family: "Noto Sans CJK SC DemiLight", 'Roboto', sans-serif;
+        }
+
+        footer {
+            margin: 50px 20px 0 20px;
+            border-top: 3px double #ccc;
+            padding: 1em 0 0 0;
+            font-size: 80%;
+            color: #999;
+        }
+
+        header, article {
+            margin-bottom: 2em;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header {
+            display: block;
+        }
+
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        table {
+            display: table;
+            border-collapse: separate;
+            border-spacing: 2px;
+            border-color: grey;
+        }
+
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        }
+
+        td, th {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+
+        footer {
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <h1 class="title">稻花香里说丰年，听取人生经验</h1>
+    <nav>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/about">关于</a></li>
+            <li><a href="/resume">简历</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <table class="t">
+        <tbody>
+        {{range .Blogs}}
+        <tr>
+            <td><a href="{{.Path}}">{{.Title}}</a></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+</article>
+
+<footer>
+    ©2017 Zhouyang Luo.
+</footer>
+
+<script src="/static/js/reload.min.js"></script>
+</body>
+</html>
